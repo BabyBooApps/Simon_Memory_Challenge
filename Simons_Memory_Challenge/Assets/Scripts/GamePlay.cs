@@ -18,7 +18,7 @@ public class GamePlay : MonoBehaviour
         ToyMgr = FindAnyObjectByType(typeof(ToyManager)) as ToyManager;
         Glow_Obj = FindAnyObjectByType(typeof(Glow)) as Glow;
         GameData.Instance.SetDemoData();
-        SetGame();
+        //SetGame();
         
     }
 
