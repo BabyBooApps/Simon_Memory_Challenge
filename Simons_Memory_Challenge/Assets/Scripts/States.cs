@@ -7,6 +7,15 @@ public class States
     
 }
 
+public enum GameState
+{
+    Playing,
+    Pause,
+    Hold,
+    Completed,
+    Fail
+}
+
 public enum Difficulty_Level
 {
     Easy,

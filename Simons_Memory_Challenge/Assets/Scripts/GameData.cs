@@ -8,7 +8,7 @@ public class GameData : MonoBehaviour
     public int Toy_Id { get; set; }
     public int Level_No { get; set; }
 
-    public int[] LevelData { get; set; }
+    public int[] LevelData;
 
     public int Click_Count = 0;
     public int Target_Click_Id = 0;
@@ -16,6 +16,9 @@ public class GameData : MonoBehaviour
     public GameType gameType;
 
     public Turn GameTurn;
+
+    public GameState Game_State;
+    public int Score { get; set; }
 
     private void Awake()
     {
@@ -33,7 +36,7 @@ public class GameData : MonoBehaviour
 
     private void Start()
     {
-        SetDemoData();
+       // SetDemoData();
     }
 
 
@@ -41,7 +44,7 @@ public class GameData : MonoBehaviour
     public void SetDemoData()
     {
         Toy_Id = 3;
-        Level_No = 12;
+        Level_No = 1;
         gameType = GameType.SinglePlayer;
     }
 
