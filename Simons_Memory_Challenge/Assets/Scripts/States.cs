@@ -31,8 +31,23 @@ public enum GameType
 
 }
 
+public enum GameScreen
+{
+    SplashScreen,
+    HomeScreen,
+    ToySelectionScreen,
+    GameScreen,
+    GameOverScreen
+}
+
 public enum Turn
 {
     Computer,
     Player
+}
+
+public enum ToyState
+{
+    locked,
+    unlocked
 }

@@ -12,6 +12,15 @@ public class GameScreen_UI : UI_Screen
 
     public GameObject Turn_Info;
 
+    public void ActivateScreen()
+    {
+        EnableScreen();
+        set_LevelNo(GameData.Instance.Level_No);
+        set_Score(GameData.Instance.Score);
+
+        GamePlay.Instance.SetGame();
+    }
+
     public void set_LevelNo(int value)
     {
         Level_Txt.text = value.ToString();

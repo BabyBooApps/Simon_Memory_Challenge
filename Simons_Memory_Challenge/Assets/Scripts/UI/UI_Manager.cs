@@ -7,6 +7,7 @@ public class UI_Manager : MonoBehaviour
 {
     public static UI_Manager Instance;
     public GameScreen_UI Game_Screen;
+    public ToySelection ToySelection_Screen;
 
     private void Awake()
     {
@@ -21,13 +22,34 @@ public class UI_Manager : MonoBehaviour
             Destroy(gameObject); // Destroy duplicate instances of the singleton class
         }
     }
+    private void Start()
+    {
+        Set_ToyselectionScreen();
+    }
+
+    public void Set_ToyselectionScreen()
+    {
+        ToySelection_Screen.EnableScreen();
+        ToySelection_Screen.PopulateToyTiles(5);
+    }
 
     public void setGameScreen()
     {
-        Game_Screen.EnableScreen();
-        Game_Screen.set_LevelNo(GameData.Instance.Level_No);
-        Game_Screen.set_Score(GameData.Instance.Score);
+        Game_Screen.ActivateScreen();
+
+
     }
+
+    public void OnToySelected( int Toy_Id)
+    {
+        Debug.Log("UI_Mgr OnToySelected : " + Toy_Id);
+        GameData.Instance.Toy_Id = Toy_Id;
+        setGameScreen();
+        ToySelection_Screen.DisableScreen();
+
+    }
+
+
 
 
 

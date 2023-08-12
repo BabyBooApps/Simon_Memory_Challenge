@@ -23,6 +23,7 @@ public class Toy : MonoBehaviour
 
     public Tile GetTile(int Id)
     {
+        Debug.Log("Expected Tile : " + Id);
         return Tiles[Id-1];
     }
 }

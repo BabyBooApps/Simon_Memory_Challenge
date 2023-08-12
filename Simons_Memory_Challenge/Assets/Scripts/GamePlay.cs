@@ -5,12 +5,28 @@ using UnityEngine;
 
 public class GamePlay : MonoBehaviour
 {
+
+    public static GamePlay Instance;
     Glow Glow_Obj;
     Toy ActiveToy;
 
 
     ToyManager ToyMgr;
     Utilities Timer = new Utilities();
+
+    private void Awake()
+    {
+        // Ensure that only one instance of the class exists
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Optional: Prevent the object from being destroyed when loading new scenes
+        }
+        else
+        {
+            Destroy(gameObject); // Destroy duplicate instances of the singleton class
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +56,6 @@ public class GamePlay : MonoBehaviour
     {
         GameData.Instance.Game_State = GameState.Hold;
         yield return new WaitForSeconds(1);
-        UI_Manager.Instance.setGameScreen();
         SetLevelData(GameData.Instance.Level_No);
         yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 3));
         UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(false);

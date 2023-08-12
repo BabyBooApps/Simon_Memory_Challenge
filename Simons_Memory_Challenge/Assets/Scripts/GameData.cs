@@ -43,9 +43,9 @@ public class GameData : MonoBehaviour
 
     public void SetDemoData()
     {
-        Toy_Id = 3;
+        
         Level_No = 1;
-        gameType = GameType.SinglePlayer;
+        gameType = GameType.FreeTrial;
     }
 
     public int GetTargetClickId()
