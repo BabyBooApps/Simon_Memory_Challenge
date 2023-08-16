@@ -55,9 +55,11 @@ public class GamePlay : MonoBehaviour
     IEnumerator Start_GamePlay()
     {
         GameData.Instance.Game_State = GameState.Hold;
+       
         yield return new WaitForSeconds(1);
+        GameData.Instance.Toy_Sounds_Count = ActiveToy.Toy_Sounds_Count;
         SetLevelData(GameData.Instance.Level_No);
-        yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 3));
+        yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 1));
         UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(false);
 
        
@@ -72,7 +74,7 @@ public class GamePlay : MonoBehaviour
             GameData.Instance.GameTurn = Turn.Player;
             UI_Manager.Instance.Game_Screen.Turn_Text.text = "Player Turn";
             UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(true);
-            yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 2));
+            yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 0));
             GameData.Instance.Game_State = GameState.Playing;
         }
         if (GameData.Instance.gameType == GameType.FreeTrial)
@@ -86,6 +88,7 @@ public class GamePlay : MonoBehaviour
     public void SpawnToy()
     {
         ActiveToy = Instantiate(ToyMgr.GetToy(GameData.Instance.Toy_Id));
+        
     }
 
     public void MouseClicked()
@@ -174,10 +177,10 @@ public class GamePlay : MonoBehaviour
 
         return null;
     }
-    IEnumerator Automate(int[] levelData)
+    IEnumerator Automate(List<int> levelData)
     {
         yield return new WaitForEndOfFrame();
-        for (int i = 0; i < levelData.Length; i++)
+        for (int i = 0; i < levelData.Count; i++)
         {
             GetTile_performGlowAndSound(levelData[i]);
 
@@ -189,8 +192,9 @@ public class GamePlay : MonoBehaviour
 
     void SetLevelData(int levelNo)
     {
-        
-        GameData.Instance.LevelData = new int[LevelManager.instance.GetLevelSequence(levelNo).Length];
+
+       // GameData.Instance.LevelData = new int[LevelManager.instance.GetLevelSequence(levelNo).Length];
+        LevelManager.instance.SetLevels(GameData.Instance.Toy_Sounds_Count);
 
         GameData.Instance.LevelData = LevelManager.instance.GetLevelSequence(levelNo);
 
@@ -210,7 +214,7 @@ public class GamePlay : MonoBehaviour
 
     public bool IsLevelCompleted(int score)
     {
-        if(score == GameData.Instance.LevelData.Length)
+        if(score == GameData.Instance.LevelData.Count)
         {
             return true;
         }
@@ -224,7 +228,8 @@ public class GamePlay : MonoBehaviour
         GameData.Instance.Score = 0;
         GameData.Instance.Click_Count = 0;
         GameData.Instance.GameTurn = Turn.Computer;
-
+        UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
+        UI_Manager.Instance.Game_Screen.set_LevelNo(GameData.Instance.Level_No);
         StartCoroutine(Start_GamePlay());
     }
 }

@@ -6,9 +6,11 @@ public class GameData : MonoBehaviour
 {
     public static GameData Instance;
     public int Toy_Id { get; set; }
+
+    public int Toy_Sounds_Count;
     public int Level_No { get; set; }
 
-    public int[] LevelData;
+    public List<int> LevelData = new List<int>();
 
     public int Click_Count = 0;
     public int Target_Click_Id = 0;
@@ -50,7 +52,7 @@ public class GameData : MonoBehaviour
 
     public int GetTargetClickId()
     {
-        if(LevelData.Length > Click_Count)
+        if(LevelData.Count > Click_Count)
         return LevelData[Click_Count];
 
         return -1;

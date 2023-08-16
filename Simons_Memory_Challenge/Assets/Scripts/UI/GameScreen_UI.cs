@@ -15,19 +15,31 @@ public class GameScreen_UI : UI_Screen
     public void ActivateScreen()
     {
         EnableScreen();
+        SetScreen();
         set_LevelNo(GameData.Instance.Level_No);
         set_Score(GameData.Instance.Score);
 
         GamePlay.Instance.SetGame();
     }
 
+    public void SetScreen()
+    {
+        Turn_Text.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
+        Timer_Txt.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
+        Level_Txt.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
+        Score_Txt.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
+      
+    }
+
     public void set_LevelNo(int value)
     {
+        if(GameData.Instance.gameType != GameType.FreeTrial)
         Level_Txt.text = value.ToString();
     }
 
     public void set_Score(int value)
     {
-        Score_Txt.text = value.ToString();
+        if (GameData.Instance.gameType != GameType.FreeTrial)
+            Score_Txt.text = value.ToString();
     }
 }

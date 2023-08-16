@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Toy.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\UI\ToySelction_Click_Handler.cs" />
     <Compile Include="Assets\Scripts\IInteractable.cs" />
     <Compile Include="Assets\Scripts\UI\ToyTile_UI.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Screen.cs" />
@@ -74,7 +75,7 @@
     <Compile Include="Assets\Scripts\States.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\Scripts\Glow.cs" />
-    <Compile Include="Assets\Scripts\UI\ToySelction_Click_Handler.cs" />
+    <Compile Include="Assets\Scripts\UI\HomeScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

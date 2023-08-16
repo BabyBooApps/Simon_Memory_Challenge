@@ -24,7 +24,7 @@ public class UI_Manager : MonoBehaviour
     }
     private void Start()
     {
-        Set_ToyselectionScreen();
+        //Set_ToyselectionScreen();
     }
 
     public void Set_ToyselectionScreen()
@@ -36,8 +36,6 @@ public class UI_Manager : MonoBehaviour
     public void setGameScreen()
     {
         Game_Screen.ActivateScreen();
-
-
     }
 
     public void OnToySelected( int Toy_Id)
