@@ -9,7 +9,7 @@ public class GamePlay : MonoBehaviour
     public static GamePlay Instance;
     Glow Glow_Obj;
     Toy ActiveToy;
-
+    UI_Manager UI_Mgr;
 
     ToyManager ToyMgr;
     Utilities Timer = new Utilities();
@@ -32,6 +32,7 @@ public class GamePlay : MonoBehaviour
     void Start()
     {
         ToyMgr = FindAnyObjectByType(typeof(ToyManager)) as ToyManager;
+        UI_Mgr = FindAnyObjectByType(typeof(UI_Manager)) as UI_Manager;
         Glow_Obj = FindAnyObjectByType(typeof(Glow)) as Glow;
         GameData.Instance.SetDemoData();
         //SetGame();
@@ -210,6 +211,7 @@ public class GamePlay : MonoBehaviour
     public void OnLevelFailed()
     {
         Debug.Log("Level Failed !!!");
+        UI_Mgr.Set_GameOver_Screen();
     }
 
     public bool IsLevelCompleted(int score)
