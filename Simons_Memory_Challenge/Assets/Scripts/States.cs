@@ -51,3 +51,11 @@ public enum ToyState
     locked,
     unlocked
 }
+
+public enum Screen
+{
+    HomeScreen,
+    ToySelectionScreen,
+    GamePlayScreen,
+    GameOverScreen
+}

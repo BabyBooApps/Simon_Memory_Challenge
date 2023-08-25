@@ -10,6 +10,10 @@ public class GameScreen_UI : UI_Screen
     public Text Timer_Txt;
     public Text Turn_Text;
 
+    public GameObject Level_Panel;
+    public GameObject ScorePanel;
+    public GameObject TimerPanel;
+
     public GameObject Turn_Info;
 
     public void ActivateScreen()
@@ -24,10 +28,9 @@ public class GameScreen_UI : UI_Screen
 
     public void SetScreen()
     {
-        Turn_Text.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
-        Timer_Txt.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
-        Level_Txt.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
-        Score_Txt.gameObject.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
+        Level_Panel.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
+        ScorePanel.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
+        TimerPanel.SetActive(GameData.Instance.gameType != GameType.FreeTrial);
       
     }
 

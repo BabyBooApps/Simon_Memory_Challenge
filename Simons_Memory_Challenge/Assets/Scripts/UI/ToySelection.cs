@@ -7,16 +7,22 @@ public class ToySelection : UI_Screen
     public List<ToyTile> Toy_Tiles_Scriptables = new List<ToyTile>();
     public ToyTile_UI Toy_Tile_Prefab;
     public GameObject Toy_Selection_Tiles_Parent;
+    public List<ToyTile_UI> PopulatedTiles = new List<ToyTile_UI>();
     
 
 
     public void PopulateToyTiles(int ToyCount)
     {
+       if(PopulatedTiles.Count != 0)
+        {
+            return;
+        }
         for(int i = 0; i < ToyCount; i++)
         {
             ToyTile_UI Current_Tile = Instantiate(Toy_Tile_Prefab) as ToyTile_UI;
             Current_Tile.transform.parent = Toy_Selection_Tiles_Parent.transform;
             Current_Tile.transform.localScale = Vector3.one;
+            PopulatedTiles.Add(Current_Tile);
             SetToyTile(Current_Tile, Toy_Tiles_Scriptables[i]);
         }
     }

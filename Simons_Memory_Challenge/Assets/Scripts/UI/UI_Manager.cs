@@ -10,6 +10,8 @@ public class UI_Manager : MonoBehaviour
     public ToySelection ToySelection_Screen;
     public HomeScreen Home_Screen;
     public GameOver GameOver_Screen;
+    public Screen CurrentScreen;
+    public Screen PreviousScreen;
 
     private void Awake()
     {
@@ -27,16 +29,21 @@ public class UI_Manager : MonoBehaviour
     private void Start()
     {
         //Set_ToyselectionScreen();
+        CurrentScreen = Screen.HomeScreen;
     }
 
     public void Set_ToyselectionScreen()
     {
+        PreviousScreen = CurrentScreen;
+        CurrentScreen = Screen.ToySelectionScreen;
         ToySelection_Screen.EnableScreen();
-        ToySelection_Screen.PopulateToyTiles(5);
+        ToySelection_Screen.PopulateToyTiles(GamePlay.Instance.ToyMgr.ToyList.Count);
     }
 
     public void setGameScreen()
     {
+        PreviousScreen = CurrentScreen;
+        CurrentScreen = Screen.GamePlayScreen;
         Game_Screen.ActivateScreen();
     }
 
@@ -56,6 +63,8 @@ public class UI_Manager : MonoBehaviour
 
     public void Set_GameOver_Screen()
     {
+        PreviousScreen = CurrentScreen;
+        CurrentScreen = Screen.GameOverScreen;
         GameOver_Screen.EnableScreen();
     }
 

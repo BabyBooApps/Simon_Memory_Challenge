@@ -6,12 +6,14 @@ public class GameOver : UI_Screen
 {
    public void OnPlayAgainClicked()
     {
-        UI_Mgr.Set_ToyselectionScreen();
+        GamePlay.Instance.DestroyToy();
+        UI_Mgr.ToySelection_Screen.EnableScreen();
         DisableScreen();
     }
 
     public void OnGoHomeClicked()
     {
+        GamePlay.Instance.DestroyToy();
         UI_Mgr.SetHomeScreen();
         DisableScreen();
     }

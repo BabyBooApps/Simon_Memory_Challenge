@@ -11,7 +11,7 @@ public class GamePlay : MonoBehaviour
     Toy ActiveToy;
     UI_Manager UI_Mgr;
 
-    ToyManager ToyMgr;
+    public ToyManager ToyMgr;
     Utilities Timer = new Utilities();
 
     private void Awake()
@@ -56,8 +56,11 @@ public class GamePlay : MonoBehaviour
     IEnumerator Start_GamePlay()
     {
         GameData.Instance.Game_State = GameState.Hold;
-       
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
+        UI_Manager.Instance.Game_Screen.Turn_Text.text = "Computer Turn";
+        UI_Mgr.Game_Screen.TimerPanel.SetActive(true);
+        UI_Manager.Instance.Game_Screen.Timer_Txt.text = 1.ToString();
+        yield return new WaitForSeconds(0.5f);
         GameData.Instance.Toy_Sounds_Count = ActiveToy.Toy_Sounds_Count;
         SetLevelData(GameData.Instance.Level_No);
         yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 1));
@@ -67,15 +70,16 @@ public class GamePlay : MonoBehaviour
 
         if (GameData.Instance.gameType == GameType.SinglePlayer)
         {
+            
             GameData.Instance.Game_State = GameState.Playing;
             GameData.Instance.GameTurn = Turn.Computer;
-            UI_Manager.Instance.Game_Screen.Turn_Text.text = "Computer Turn";
             yield return Automate(GameData.Instance.LevelData);
             GameData.Instance.Game_State = GameState.Hold;
             GameData.Instance.GameTurn = Turn.Player;
             UI_Manager.Instance.Game_Screen.Turn_Text.text = "Player Turn";
             UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(true);
-            yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 0));
+            yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 1));
+            UI_Mgr.Game_Screen.TimerPanel.SetActive(false);
             GameData.Instance.Game_State = GameState.Playing;
         }
         if (GameData.Instance.gameType == GameType.FreeTrial)
@@ -90,6 +94,12 @@ public class GamePlay : MonoBehaviour
     {
         ActiveToy = Instantiate(ToyMgr.GetToy(GameData.Instance.Toy_Id));
         
+    }
+
+    public void DestroyToy()
+    {
+        Destroy(ActiveToy.gameObject);
+        ActiveToy = null;
     }
 
     public void MouseClicked()
