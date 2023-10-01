@@ -93,6 +93,7 @@ public class GamePlay : MonoBehaviour
     public void SpawnToy()
     {
         ActiveToy = Instantiate(ToyMgr.GetToy(GameData.Instance.Toy_Id));
+        ActiveToy.transform.position = new Vector3(0, -0.5f, 0);
         
     }
 

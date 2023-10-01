@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Toy5
   m_EditorClassIdentifier: 
   Tile_Bg: {fileID: 0}
-  Toy_Img: {fileID: 21300000, guid: 26d857274eac93c40ad938fa262fa74f, type: 3}
+  Toy_Img: {fileID: 21300000, guid: 15fb4eafba9b82c41ace9867b7128f3c, type: 3}
   ToyName: Toy5
   Toy_Id: 5

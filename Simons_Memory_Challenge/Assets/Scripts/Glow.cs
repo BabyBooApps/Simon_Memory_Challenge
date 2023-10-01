@@ -10,7 +10,7 @@ public class Glow : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
-        this.transform.position = new Vector3(0, 0, -2);
+        this.transform.position = new Vector3(0, -0.5f, -2);
         this.GetComponentInChildren<SpriteRenderer>().sprite = Sp;
         this.GetComponentInChildren<SpriteRenderer>().enabled = true;
 
