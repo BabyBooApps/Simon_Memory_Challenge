@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\UI\HomeScreen.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\Scripts\Glow.cs" />
+    <Compile Include="Assets\Scripts\CameraAspectRatio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

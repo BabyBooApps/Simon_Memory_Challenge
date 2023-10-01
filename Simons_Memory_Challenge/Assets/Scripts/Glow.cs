@@ -10,13 +10,13 @@ public class Glow : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
-        this.transform.position = new Vector3(pos.x, pos.y, -1);
-        this.GetComponent<SpriteRenderer>().sprite = Sp;
-        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.transform.position = new Vector3(0, 0, -2);
+        this.GetComponentInChildren<SpriteRenderer>().sprite = Sp;
+        this.GetComponentInChildren<SpriteRenderer>().enabled = true;
 
         yield return new WaitForSeconds(0.2f);
 
-        this.GetComponent<SpriteRenderer>().enabled = false;
+        this.GetComponentInChildren<SpriteRenderer>().enabled = false;
     }
 
     public void ActivateGlow(Sprite Sp, Vector3 pos)

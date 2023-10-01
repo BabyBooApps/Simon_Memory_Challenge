@@ -52,7 +52,7 @@ public enum ToyState
     unlocked
 }
 
-public enum Screen
+public enum ActiveScreen
 {
     HomeScreen,
     ToySelectionScreen,
