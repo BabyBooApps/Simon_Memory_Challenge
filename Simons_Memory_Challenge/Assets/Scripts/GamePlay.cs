@@ -49,6 +49,7 @@ public class GamePlay : MonoBehaviour
         }else
         {
             GameData.Instance.GameTurn = Turn.Player;
+            GameData.Instance.Game_State = GameState.Playing;
         }
        
     }
@@ -227,6 +228,7 @@ public class GamePlay : MonoBehaviour
     public void OnLevelCompleted()
     {
         Debug.Log("LevelCompleted Successfully");
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.LevelSuccess);
         GameData.Instance.Game_State = GameState.Completed;
         SetNextLevel();
     }
@@ -234,6 +236,7 @@ public class GamePlay : MonoBehaviour
     public void OnLevelFailed()
     {
         Debug.Log("Level Failed !!!");
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.LevelFail);
         GameData.Instance.Game_State = GameState.Fail;
         UI_Mgr.Set_GameOver_Screen();
     }

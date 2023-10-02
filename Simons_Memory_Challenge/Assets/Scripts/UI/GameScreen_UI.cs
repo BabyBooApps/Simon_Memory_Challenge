@@ -48,6 +48,7 @@ public class GameScreen_UI : UI_Screen
 
     public void OnHomeBtn_Click()
     {
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         GamePlay.Instance.DestroyToy();
         UI_Mgr.SetHomeScreen();
         GameData.Instance.Level_No = 0;

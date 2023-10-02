@@ -6,18 +6,23 @@ public class HomeScreen : UI_Screen
 {
     public void OnFreeRun_Btn_Click()
     {
-        Execute_Play();
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         GameData.Instance.gameType = GameType.FreeTrial;
+        Execute_Play();
+       
     }
 
     public void OnChallenge_Button_Clicked()
     {
-        Execute_Play();
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         GameData.Instance.gameType = GameType.SinglePlayer;
+        Execute_Play();
+       
     }
 
     public void Execute_Play()
     {
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         this.gameObject.SetActive(false);
         UI_Mgr.Set_ToyselectionScreen();
     }

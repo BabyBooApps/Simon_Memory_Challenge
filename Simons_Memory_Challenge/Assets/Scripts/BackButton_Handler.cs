@@ -23,10 +23,10 @@ public class BackButton_Handler : MonoBehaviour
 
     void OnBackButtonClicked()
     {
-        switch(UI_Manager.Instance.CurrentScreen)
+        switch (UI_Manager.Instance.CurrentScreen)
         {
             case ActiveScreen.HomeScreen:
-               
+                UI_Manager.Instance.Set_Quit_Screen();
 
                 break;
             case ActiveScreen.ToySelectionScreen:
@@ -36,7 +36,12 @@ public class BackButton_Handler : MonoBehaviour
             case ActiveScreen.GamePlayScreen:
                 break;
             case ActiveScreen.GameOverScreen:
-                UI_Manager.Instance.GameOver_Screen.OnPlayAgainClicked();             
+                UI_Manager.Instance.GameOver_Screen.OnPlayAgainClicked();
+                break;
+            case ActiveScreen.QuitScreen:
+                UI_Manager.Instance.quit_Screen.OnCancelButtonClick();
+                UI_Manager.Instance.SetHomeScreen();
+
                 break;
         }
     }

@@ -57,5 +57,6 @@ public enum ActiveScreen
     HomeScreen,
     ToySelectionScreen,
     GamePlayScreen,
-    GameOverScreen
+    GameOverScreen,
+    QuitScreen
 }

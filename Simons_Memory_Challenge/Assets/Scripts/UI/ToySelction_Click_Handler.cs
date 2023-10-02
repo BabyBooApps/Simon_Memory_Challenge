@@ -31,7 +31,7 @@ public class ToySelction_Click_Handler : MonoBehaviour
         {
             Toy_Tile = GetComponentInParent<ToyTile_UI>();
         }
-
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         ToySelection.ToyTile_Clicked(Toy_Tile.Toy_id);
     }
 }

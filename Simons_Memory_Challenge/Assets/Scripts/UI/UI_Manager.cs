@@ -10,6 +10,7 @@ public class UI_Manager : MonoBehaviour
     public ToySelection ToySelection_Screen;
     public HomeScreen Home_Screen;
     public GameOver GameOver_Screen;
+    public QuitScreen quit_Screen;
     public ActiveScreen CurrentScreen;
     public ActiveScreen PreviousScreen;
 
@@ -67,6 +68,13 @@ public class UI_Manager : MonoBehaviour
         PreviousScreen = CurrentScreen;
         CurrentScreen = ActiveScreen.GameOverScreen;
         GameOver_Screen.EnableScreen();
+    }
+
+    public void Set_Quit_Screen()
+    {
+        PreviousScreen = CurrentScreen;
+        quit_Screen.EnableScreen();
+        CurrentScreen = ActiveScreen.QuitScreen;
     }
 
 

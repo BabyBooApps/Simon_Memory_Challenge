@@ -6,6 +6,11 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
     public AudioSource ShortSounds_Player;
+
+    public AudioClip Button_Click;
+    public AudioClip LevelSuccess;
+    public AudioClip LevelFail;
+   
     private void Awake()
     {
         // Ensure that only one instance of the class exists
