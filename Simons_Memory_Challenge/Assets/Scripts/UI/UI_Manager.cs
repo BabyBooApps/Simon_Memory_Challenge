@@ -59,6 +59,7 @@ public class UI_Manager : MonoBehaviour
     public void SetHomeScreen()
     {
         Home_Screen.EnableScreen();
+        UI_Manager.Instance.CurrentScreen = ActiveScreen.HomeScreen;
     }
 
     public void Set_GameOver_Screen()
@@ -68,6 +69,24 @@ public class UI_Manager : MonoBehaviour
         GameOver_Screen.EnableScreen();
     }
 
+
+    public GameObject GetCurrentScreen()
+    {
+        if(CurrentScreen == ActiveScreen.HomeScreen)
+        {
+            return Home_Screen.gameObject;
+        }else if(CurrentScreen == ActiveScreen.ToySelectionScreen)
+        {
+            return ToySelection_Screen.gameObject;
+        }else if(CurrentScreen == ActiveScreen.GamePlayScreen)
+        {
+            return Game_Screen.gameObject;
+        }else if(CurrentScreen == ActiveScreen.GameOverScreen)
+        {
+            return GameOver_Screen.gameObject;
+        }
+        return null;
+    }
 
 
 

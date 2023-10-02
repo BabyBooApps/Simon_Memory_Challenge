@@ -13,7 +13,7 @@ public class Utilities
         while(timerValue >= 0)
         {
             target.text = timerValue.ToString();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0);
 
             timerValue--;
             

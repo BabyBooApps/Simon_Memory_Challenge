@@ -56,15 +56,15 @@ public class GamePlay : MonoBehaviour
     IEnumerator Start_GamePlay()
     {
         GameData.Instance.Game_State = GameState.Hold;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         UI_Manager.Instance.Game_Screen.Turn_Text.text = "Computer Turn";
         UI_Mgr.Game_Screen.TimerPanel.SetActive(true);
         UI_Manager.Instance.Game_Screen.Timer_Txt.text = 1.ToString();
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         GameData.Instance.Toy_Sounds_Count = ActiveToy.Toy_Sounds_Count;
         SetLevelData(GameData.Instance.Level_No);
-        yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 1));
-        UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(false);
+        //yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 0));
+        //UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(false);
 
        
 
@@ -75,16 +75,18 @@ public class GamePlay : MonoBehaviour
             GameData.Instance.GameTurn = Turn.Computer;
             yield return Automate(GameData.Instance.LevelData);
             GameData.Instance.Game_State = GameState.Hold;
+            yield return new WaitForSeconds(0.2f);
             GameData.Instance.GameTurn = Turn.Player;
             UI_Manager.Instance.Game_Screen.Turn_Text.text = "Player Turn";
             UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(true);
-            yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 1));
-            UI_Mgr.Game_Screen.TimerPanel.SetActive(false);
+           // yield return StartCoroutine(Timer.StartTimer(UI_Manager.Instance.Game_Screen.Timer_Txt, 0));
+           // UI_Mgr.Game_Screen.TimerPanel.SetActive(false);
             GameData.Instance.Game_State = GameState.Playing;
         }
         if (GameData.Instance.gameType == GameType.FreeTrial)
         {
             GameData.Instance.GameTurn = Turn.Player;
+            GameData.Instance.Game_State = GameState.Playing;
         }
     }
 
@@ -106,6 +108,11 @@ public class GamePlay : MonoBehaviour
     public void MouseClicked()
     {
         Debug.Log("Mouse Click recieved in GamePlay");
+        if(GameData.Instance.Game_State != GameState.Playing)
+        {
+            return;
+        }
+
         Tile ClickedTile = GetClickedTile();
         if (ClickedTile)
             PerformClick(ClickedTile.TileID);
@@ -118,30 +125,33 @@ public class GamePlay : MonoBehaviour
             if(GameData.Instance.gameType == GameType.FreeTrial)
             {
                 Tile tile = GetTile_performGlowAndSound(id);
+            }else
+            {
+                if (GameData.Instance.GameTurn == Turn.Player && GameData.Instance.gameType != GameType.FreeTrial && GameData.Instance.Game_State == GameState.Playing)
+                {
+                    Tile tile = GetTile_performGlowAndSound(id);
+                    if (isCorrectClick(tile.TileID))
+                    {
+                        Debug.Log("Correct click");
+                        GameData.Instance.Score++;
+                        GameData.Instance.Click_Count++;
+                        UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
+                        if (IsLevelCompleted(GameData.Instance.Score))
+                        {
+                            OnLevelCompleted();
+                        }
+
+                    }
+                    else
+                    {
+                        Debug.Log("Wrong click");
+                        OnLevelFailed();
+                    }
+                }
             }
             
 
-            if (GameData.Instance.GameTurn == Turn.Player && GameData.Instance.gameType != GameType.FreeTrial && GameData.Instance.Game_State == GameState.Playing)
-            {
-                Tile tile = GetTile_performGlowAndSound(id);
-                if (isCorrectClick(tile.TileID))
-                {
-                    Debug.Log("Correct click");
-                    GameData.Instance.Score++;
-                    GameData.Instance.Click_Count++;
-                    UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
-                    if(IsLevelCompleted(GameData.Instance.Score))
-                    {
-                        OnLevelCompleted();
-                    }
-                    
-                }
-                else
-                {
-                    Debug.Log("Wrong click");
-                    OnLevelFailed();
-                }
-            }
+         
         }
 
     }
@@ -194,9 +204,10 @@ public class GamePlay : MonoBehaviour
         yield return new WaitForEndOfFrame();
         for (int i = 0; i < levelData.Count; i++)
         {
+            yield return new WaitForSeconds(0.5f);
             GetTile_performGlowAndSound(levelData[i]);
 
-            yield return new WaitForSeconds(1);
+           
         }
 
 
@@ -216,12 +227,14 @@ public class GamePlay : MonoBehaviour
     public void OnLevelCompleted()
     {
         Debug.Log("LevelCompleted Successfully");
+        GameData.Instance.Game_State = GameState.Completed;
         SetNextLevel();
     }
 
     public void OnLevelFailed()
     {
         Debug.Log("Level Failed !!!");
+        GameData.Instance.Game_State = GameState.Fail;
         UI_Mgr.Set_GameOver_Screen();
     }
 

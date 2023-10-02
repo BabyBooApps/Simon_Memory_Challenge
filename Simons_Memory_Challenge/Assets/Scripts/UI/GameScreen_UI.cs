@@ -45,4 +45,14 @@ public class GameScreen_UI : UI_Screen
         if (GameData.Instance.gameType != GameType.FreeTrial)
             Score_Txt.text = value.ToString();
     }
+
+    public void OnHomeBtn_Click()
+    {
+        GamePlay.Instance.DestroyToy();
+        UI_Mgr.SetHomeScreen();
+        GameData.Instance.Level_No = 0;
+        GameData.Instance.Score = 0;
+        GameData.Instance.Click_Count = 0;
+        DisableScreen();
+    }
 }
