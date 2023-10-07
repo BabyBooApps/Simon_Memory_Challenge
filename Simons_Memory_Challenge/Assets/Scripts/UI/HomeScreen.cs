@@ -26,4 +26,9 @@ public class HomeScreen : UI_Screen
         this.gameObject.SetActive(false);
         UI_Mgr.Set_ToyselectionScreen();
     }
+
+    public void OnCoinStore_Btn_Cick()
+    {
+        AdsManager.Instance.RewardAd.ShowAd();
+    }
 }

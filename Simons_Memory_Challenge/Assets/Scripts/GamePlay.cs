@@ -253,6 +253,7 @@ public class GamePlay : MonoBehaviour
 
     public void SetNextLevel()
     {
+        AddCoins(Coin_Bonus.CoinBonus[GameData.Instance.Level_No - 1]);
         GameData.Instance.Level_No++;
         GameData.Instance.Score = 0;
         GameData.Instance.Click_Count = 0;
@@ -260,6 +261,22 @@ public class GamePlay : MonoBehaviour
         UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
         UI_Manager.Instance.Game_Screen.set_LevelNo(GameData.Instance.Level_No);
         StartCoroutine(Start_GamePlay());
+    }
+
+    public void AddCoins(int Bonus)
+    {
+       int coins = Coin_Manager.Instance.getCoinCount() + Bonus;
+        Coin_Manager.Instance.SetCoins(coins);
+        PlayerPrefs_Manager.Instance.SetCoins(coins);
+        UI_Manager.Instance.SetCoins_UI(coins);
+
+    }
+
+    public void GrantReward_For_Video(int reward)
+    {
+        UI_Manager.Instance.Animate_Toast("50 Coins Rewarded");
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.LevelSuccess);
+        AddCoins(reward);
     }
 }
 

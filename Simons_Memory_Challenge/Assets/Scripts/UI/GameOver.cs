@@ -24,5 +24,6 @@ public class GameOver : UI_Screen
         GameData.Instance.Score = 0;
         GameData.Instance.Click_Count = 0;
         DisableScreen();
+        AdsManager.Instance.interstitial.ShowAd();
     }
 }

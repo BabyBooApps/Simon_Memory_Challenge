@@ -11,8 +11,11 @@ public class UI_Manager : MonoBehaviour
     public HomeScreen Home_Screen;
     public GameOver GameOver_Screen;
     public QuitScreen quit_Screen;
+    public Toast toast;
     public ActiveScreen CurrentScreen;
     public ActiveScreen PreviousScreen;
+
+    public List<Text> Coins_UI_Elements = new List<Text>();
 
     private void Awake()
     {
@@ -30,6 +33,7 @@ public class UI_Manager : MonoBehaviour
     private void Start()
     {
         //Set_ToyselectionScreen();
+        SetGameCoins();
         CurrentScreen = ActiveScreen.HomeScreen;
     }
 
@@ -94,6 +98,26 @@ public class UI_Manager : MonoBehaviour
             return GameOver_Screen.gameObject;
         }
         return null;
+    }
+
+    public void SetCoins_UI(int coins)
+    {
+        for(int i = 0; i < Coins_UI_Elements.Count; i++)
+        {
+            Coins_UI_Elements[i].text = coins.ToString();
+        }
+    }
+
+    public void SetGameCoins()
+    {
+        Coin_Manager.Instance.SetCoins(PlayerPrefs_Manager.Instance.GetCoins());
+        SetCoins_UI(Coin_Manager.Instance.getCoinCount());
+    }
+
+    public void Animate_Toast(string Message)
+    {
+        toast.EnableScreen();
+        StartCoroutine(toast.Animate_Toast(Message));
     }
 
 
