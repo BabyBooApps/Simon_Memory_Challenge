@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\UI\UI_Manager.cs" />
     <Compile Include="Assets\Scripts\ToyManager.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
+    <Compile Include="Assets\Scripts\UI\Toast.cs" />
     <Compile Include="Assets\Scripts\UI\ScriptableObject\ToyTile.cs" />
     <Compile Include="Assets\Scripts\Toy.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="Assets\Scripts\UI\GameOver.cs" />
     <Compile Include="Assets\Scripts\UI\QuitScreen.cs" />
     <Compile Include="Assets\Scripts\UI\GameScreen_UI.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefs_Manager.cs" />
+    <Compile Include="Assets\Scripts\UI\Coin_StoreScreen.cs" />
     <Compile Include="Assets\Scripts\UI\ToySelection.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\States.cs" />
@@ -81,13 +84,11 @@
     <Compile Include="Assets\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\Scripts\Glow.cs" />
     <Compile Include="Assets\Scripts\Ads\RewardedAdController.cs" />
+    <Compile Include="Assets\Scripts\Coin_Manager.cs" />
     <Compile Include="Assets\Scripts\Ads\AdsManager.cs" />
     <Compile Include="Assets\Scripts\BackButton_Handler.cs" />
     <Compile Include="Assets\Scripts\Ads\InterstitialAdController.cs" />
-    <Compile Include="Assets\Scripts\Coin_Manager.cs" />
-    <Compile Include="Assets\Scripts\PlayerPrefs_Manager.cs" />
-    <Compile Include="Assets\Scripts\UI\Coin_StoreScreen.cs" />
-    <Compile Include="Assets\Scripts\UI\Toast.cs" />
+    <Compile Include="Assets\Scripts\UI\Buy_Toy_Screen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

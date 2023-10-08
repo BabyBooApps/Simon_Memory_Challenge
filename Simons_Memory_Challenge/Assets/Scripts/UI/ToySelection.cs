@@ -29,9 +29,11 @@ public class ToySelection : UI_Screen
 
     public void SetToyTile(ToyTile_UI toy , ToyTile Target_toy_Tile)
     {
-        toy.Name.text = Target_toy_Tile.ToyName;
+        toy.Toy_Name = Target_toy_Tile.ToyName;
+        toy.ToyName.text = Target_toy_Tile.ToyName;
         toy.Toy_Image.sprite = Target_toy_Tile.Toy_Img;
         toy.Toy_id = Target_toy_Tile.Toy_Id;
+        toy.coinsToBuy = Target_toy_Tile.CoinsToBuy;
     }
 
     public void ToyTile_Clicked(int toyId)
@@ -39,6 +41,11 @@ public class ToySelection : UI_Screen
         Debug.Log("clicked on : " + toyId);
         UI_Mgr.OnToySelected(toyId);
         
+    }
+
+    public void On_CoinStoreButtonClick()
+    {
+        UI_Manager.Instance.Activate_CoinStore_Screen();
     }
    
 }

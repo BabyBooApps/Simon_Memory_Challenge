@@ -29,4 +29,17 @@ public class PlayerPrefs_Manager : MonoBehaviour
     {
         return PlayerPrefs.GetInt("Coins");
     }
+
+    public void SetToy_LockStatsu(string toyId , int Lockstatus)
+    {
+        PlayerPrefs.SetInt(toyId, Lockstatus);
+    }
+
+    public bool GetLockStatus(string toyId)
+    {
+        bool isToyUnlocked = false;
+        isToyUnlocked = PlayerPrefs.GetInt(toyId) == 1 ? true : false;
+
+        return isToyUnlocked;
+    }
 }

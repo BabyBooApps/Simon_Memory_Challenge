@@ -41,8 +41,12 @@ public class BackButton_Handler : MonoBehaviour
             case ActiveScreen.QuitScreen:
                 UI_Manager.Instance.quit_Screen.OnCancelButtonClick();
                 UI_Manager.Instance.SetHomeScreen();
-
                 break;
+            case ActiveScreen.CoinStoreScreen:
+                UI_Manager.Instance.CoinStore_Screen.OnBackButtonClicked();
+                break;
+
+                
         }
     }
 }

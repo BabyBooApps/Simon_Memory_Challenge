@@ -37,7 +37,8 @@ public enum GameScreen
     HomeScreen,
     ToySelectionScreen,
     GameScreen,
-    GameOverScreen
+    GameOverScreen,
+    CoinStoreScreen
 }
 
 public enum Turn
@@ -58,5 +59,6 @@ public enum ActiveScreen
     ToySelectionScreen,
     GamePlayScreen,
     GameOverScreen,
-    QuitScreen
+    QuitScreen,
+    CoinStoreScreen
 }

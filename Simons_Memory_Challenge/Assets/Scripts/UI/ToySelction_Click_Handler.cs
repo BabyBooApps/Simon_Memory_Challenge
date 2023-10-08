@@ -31,7 +31,15 @@ public class ToySelction_Click_Handler : MonoBehaviour
         {
             Toy_Tile = GetComponentInParent<ToyTile_UI>();
         }
-        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
-        ToySelection.ToyTile_Clicked(Toy_Tile.Toy_id);
+        if(PlayerPrefs_Manager.Instance.GetLockStatus(Toy_Tile.Toy_id.ToString()))
+        {
+            AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
+            ToySelection.ToyTile_Clicked(Toy_Tile.Toy_id);
+        }else
+        {
+            Debug.Log("Toy Locked !!!");
+            UI_Manager.Instance.Activate_Buy_Toy_Screen(Toy_Tile);
+        }
+        
     }
 }

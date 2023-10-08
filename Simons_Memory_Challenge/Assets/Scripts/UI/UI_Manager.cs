@@ -12,6 +12,8 @@ public class UI_Manager : MonoBehaviour
     public GameOver GameOver_Screen;
     public QuitScreen quit_Screen;
     public Toast toast;
+    public Coin_StoreScreen CoinStore_Screen;
+    public Buy_Toy_Screen BuyToyScreen;
     public ActiveScreen CurrentScreen;
     public ActiveScreen PreviousScreen;
 
@@ -118,6 +120,20 @@ public class UI_Manager : MonoBehaviour
     {
         toast.EnableScreen();
         StartCoroutine(toast.Animate_Toast(Message));
+    }
+
+    public void Activate_CoinStore_Screen()
+    {
+        CoinStore_Screen.EnableScreen();
+        PreviousScreen = CurrentScreen;
+
+        CurrentScreen = ActiveScreen.CoinStoreScreen ;
+    }
+
+    public void Activate_Buy_Toy_Screen(ToyTile_UI toy)
+    {
+        BuyToyScreen.EnableScreen();
+        BuyToyScreen.SetScreen(toy);
     }
 
 

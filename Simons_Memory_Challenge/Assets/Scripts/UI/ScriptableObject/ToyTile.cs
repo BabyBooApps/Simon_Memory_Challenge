@@ -10,5 +10,6 @@ public class ToyTile : ScriptableObject
     public Sprite Toy_Img;
     public string ToyName;
     public int Toy_Id;
+    public int CoinsToBuy;
  
 }

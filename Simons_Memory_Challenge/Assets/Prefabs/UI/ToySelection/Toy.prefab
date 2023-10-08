@@ -405,11 +405,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bg: {fileID: 7176946207220038961}
   Toy_Image: {fileID: 7176946207577516872}
-  Name: {fileID: 7176946206031903018}
+  Toy_Name: 
+  ToyName: {fileID: 7176946206031903018}
   Toy_id: 0
   Lock: {fileID: 7176946207483018085}
   isUnlocked: 0
   Lock_Img: {fileID: 7176946206180575011}
+  coinsToBuy: 0
 --- !u!1 &7176946207220038963
 GameObject:
   m_ObjectHideFlags: 0

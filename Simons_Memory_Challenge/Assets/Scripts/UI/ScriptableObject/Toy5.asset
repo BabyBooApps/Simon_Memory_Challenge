@@ -16,3 +16,4 @@ MonoBehaviour:
   Toy_Img: {fileID: 21300000, guid: 15fb4eafba9b82c41ace9867b7128f3c, type: 3}
   ToyName: Toy5
   Toy_Id: 5
+  CoinsToBuy: 1500

@@ -29,6 +29,7 @@ public class HomeScreen : UI_Screen
 
     public void OnCoinStore_Btn_Cick()
     {
-        AdsManager.Instance.RewardAd.ShowAd();
+        //AdsManager.Instance.RewardAd.ShowAd();
+        UI_Manager.Instance.Activate_CoinStore_Screen();
     }
 }
