@@ -60,5 +60,6 @@ public enum ActiveScreen
     GamePlayScreen,
     GameOverScreen,
     QuitScreen,
-    CoinStoreScreen
+    CoinStoreScreen,
+    BuyToyScreen
 }

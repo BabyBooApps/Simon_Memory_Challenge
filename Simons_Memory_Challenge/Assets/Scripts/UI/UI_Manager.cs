@@ -134,6 +134,9 @@ public class UI_Manager : MonoBehaviour
     {
         BuyToyScreen.EnableScreen();
         BuyToyScreen.SetScreen(toy);
+
+        PreviousScreen = CurrentScreen;
+        CurrentScreen = ActiveScreen.BuyToyScreen;
     }
 
 

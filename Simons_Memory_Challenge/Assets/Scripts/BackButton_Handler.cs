@@ -45,6 +45,10 @@ public class BackButton_Handler : MonoBehaviour
             case ActiveScreen.CoinStoreScreen:
                 UI_Manager.Instance.CoinStore_Screen.OnBackButtonClicked();
                 break;
+            case ActiveScreen.BuyToyScreen:
+                UI_Manager.Instance.BuyToyScreen.OnBackButton_Click();
+               
+                break;
 
                 
         }

@@ -1,0 +1,3 @@
+Package : com.SuperWizGames.Simon
+Password : SuperWiz@1234
+Alias : Simon

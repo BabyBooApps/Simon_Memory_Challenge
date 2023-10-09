@@ -37,6 +37,11 @@ public class Coin_Manager : MonoBehaviour
         CoinCount += count;
     }
 
+    public void RemoveCoins(int count)
+    {
+        CoinCount -= count;
+    }
+
 }
 
 public static class Coin_Bonus
