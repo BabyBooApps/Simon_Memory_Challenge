@@ -20,7 +20,7 @@ public class GameOver : UI_Screen
         AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         GamePlay.Instance.DestroyToy();
         UI_Mgr.SetHomeScreen();
-        GameData.Instance.Level_No = 0;
+        GameData.Instance.Level_No = 1;
         GameData.Instance.Score = 0;
         GameData.Instance.Click_Count = 0;
         DisableScreen();

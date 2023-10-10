@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -253,14 +254,22 @@ public class GamePlay : MonoBehaviour
 
     public void SetNextLevel()
     {
-        AddCoins(Coin_Bonus.CoinBonus[GameData.Instance.Level_No - 1]);
-        GameData.Instance.Level_No++;
-        GameData.Instance.Score = 0;
-        GameData.Instance.Click_Count = 0;
-        GameData.Instance.GameTurn = Turn.Computer;
-        UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
-        UI_Manager.Instance.Game_Screen.set_LevelNo(GameData.Instance.Level_No);
-        StartCoroutine(Start_GamePlay());
+        try
+        {
+
+            AddCoins(Coin_Bonus.CoinBonus[GameData.Instance.Level_No - 1]);
+            GameData.Instance.Level_No++;
+            GameData.Instance.Score = 0;
+            GameData.Instance.Click_Count = 0;
+            GameData.Instance.GameTurn = Turn.Computer;
+            UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
+            UI_Manager.Instance.Game_Screen.set_LevelNo(GameData.Instance.Level_No);
+            StartCoroutine(Start_GamePlay());
+        }catch(Exception ex)
+        {
+            Debug.Log("Setting Next Level Exception :" + ex.Message);
+        }
+       
     }
 
     public void AddCoins(int Bonus)

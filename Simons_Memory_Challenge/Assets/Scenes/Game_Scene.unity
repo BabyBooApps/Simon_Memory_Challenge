@@ -2281,7 +2281,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 326546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9928c7c5b28e8164bbd97be05f28c878, type: 3}
+  m_Script: {fileID: 11500000, guid: 5283a62a89f2fcd4284e0ef25b85fa67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AdLoadedStatus: {fileID: 0}
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 326546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a69f46495f46be4479307204641241e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3df71726ce21c7746adb8be2d01243c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AdLoadedStatus: {fileID: 0}
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 326546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d6da6e25b450f4aa5a62ebecd05119, type: 3}
+  m_Script: {fileID: 11500000, guid: fcec079d878b1f440a8abd3e26bb66eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   banner: {fileID: 326546389}
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 326546387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cdb61c8d9beaa946954dbf3473e0ba0, type: 3}
+  m_Script: {fileID: 11500000, guid: fc70f05e3adf9f6488f4c6e24b6e7d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AdLoadedStatus: {fileID: 0}
@@ -5138,6 +5138,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734013390}
   m_CullTransparentMesh: 1
+--- !u!1 &784867267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784867269}
+  - component: {fileID: 784867268}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &784867268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784867267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f533575e466ae4ebae8a99e6ebeadf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinCount: 0
+--- !u!4 &784867269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784867267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0777365, y: -0.8746327, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789560333
 GameObject:
   m_ObjectHideFlags: 0
@@ -10166,7 +10211,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1459648863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1523f8e7f560cd143b6452c82d0f5020, type: 3}
+  m_Script: {fileID: 11500000, guid: 68ef43082ab3b0c418acc942586d72b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UI_Mgr: {fileID: 0}
@@ -10644,7 +10689,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1512858735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcc4ab71133376a409b222e98a3b5d97, type: 3}
+  m_Script: {fileID: 11500000, guid: 471c7858d62523543976b8b022dacd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UI_Mgr: {fileID: 0}
@@ -12420,7 +12465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23495ba3bbb7cf742ba310607e56c1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinCount: 0
 --- !u!4 &1805459993
 Transform:
   m_ObjectHideFlags: 0
@@ -12484,7 +12528,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1821988743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c82de5948c0674cb9d0d15ffc20dd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b0606a6a998e264fb11b8f06054aa86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UI_Mgr: {fileID: 0}
@@ -13218,7 +13262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948426176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d22f51a6f473a46a7520bdbc15ec5e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d3c3494dad8ad946bd3b18951fb92cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1948426178

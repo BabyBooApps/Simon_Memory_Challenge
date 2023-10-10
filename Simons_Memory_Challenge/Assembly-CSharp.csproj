@@ -58,37 +58,37 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\GamePlay.cs" />
+    <Compile Include="Assets\Scripts\UI\Coin_StoreScreen.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Manager.cs" />
+    <Compile Include="Assets\Scripts\PlayerPrefs_Manager.cs" />
     <Compile Include="Assets\Scripts\ToyManager.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
-    <Compile Include="Assets\Scripts\UI\Toast.cs" />
-    <Compile Include="Assets\Scripts\UI\ScriptableObject\ToyTile.cs" />
+    <Compile Include="Assets\Scripts\Ads\RewardedAdController.cs" />
     <Compile Include="Assets\Scripts\UI\Buy_Toy_Screen.cs" />
+    <Compile Include="Assets\Scripts\UI\ScriptableObject\ToyTile.cs" />
     <Compile Include="Assets\Scripts\Toy.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Toast.cs" />
     <Compile Include="Assets\Scripts\UI\ToySelction_Click_Handler.cs" />
     <Compile Include="Assets\Scripts\IInteractable.cs" />
     <Compile Include="Assets\Scripts\UI\ToyTile_UI.cs" />
     <Compile Include="Assets\Scripts\CameraAspectRatio.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Screen.cs" />
     <Compile Include="Assets\Scripts\UI\GameOver.cs" />
+    <Compile Include="Assets\Scripts\Ads\AdsManager.cs" />
     <Compile Include="Assets\Scripts\UI\QuitScreen.cs" />
     <Compile Include="Assets\Scripts\UI\GameScreen_UI.cs" />
-    <Compile Include="Assets\Scripts\PlayerPrefs_Manager.cs" />
-    <Compile Include="Assets\Scripts\UI\Coin_StoreScreen.cs" />
     <Compile Include="Assets\Scripts\UI\ToySelection.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\States.cs" />
+    <Compile Include="Assets\Scripts\Ads\InterstitialAdController.cs" />
     <Compile Include="Assets\Scripts\Ads\BannerViewController.cs" />
+    <Compile Include="Assets\Scripts\Coin_Manager.cs" />
     <Compile Include="Assets\Scripts\UI\HomeScreen.cs" />
     <Compile Include="Assets\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\Scripts\Glow.cs" />
-    <Compile Include="Assets\Scripts\Ads\RewardedAdController.cs" />
-    <Compile Include="Assets\Scripts\Coin_Manager.cs" />
-    <Compile Include="Assets\Scripts\Ads\AdsManager.cs" />
     <Compile Include="Assets\Scripts\BackButton_Handler.cs" />
-    <Compile Include="Assets\Scripts\Ads\InterstitialAdController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -364,35 +364,35 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Common">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    <Reference Include="GoogleMobileAds.Ump">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Ump.Unity">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
@@ -400,8 +400,8 @@
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Ump">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.29f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>

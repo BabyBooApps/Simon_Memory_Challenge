@@ -18,6 +18,7 @@ public class PlayerPrefs_Manager : MonoBehaviour
         {
             Instance = this;
         }
+       // PlayerPrefs.DeleteAll();
     }
 
     public void SetCoins(int count)
