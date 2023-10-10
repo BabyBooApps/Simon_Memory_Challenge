@@ -62,8 +62,8 @@
     <Compile Include="Assets\Scripts\ToyManager.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\UI\Toast.cs" />
-    <Compile Include="Assets\Scripts\UI\Buy_Toy_Screen.cs" />
     <Compile Include="Assets\Scripts\UI\ScriptableObject\ToyTile.cs" />
+    <Compile Include="Assets\Scripts\UI\Buy_Toy_Screen.cs" />
     <Compile Include="Assets\Scripts\Toy.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
