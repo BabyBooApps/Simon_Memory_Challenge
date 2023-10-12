@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameData : MonoBehaviour
 {
     public static GameData Instance;
+    public bool TestMode;
     public int Toy_Id { get; set; }
 
     public int Toy_Sounds_Count;

@@ -2453,6 +2453,9 @@ MonoBehaviour:
   - {fileID: 8270191793316151471, guid: 51100d395c6515046ad127c8d289b2ca, type: 3}
   - {fileID: 8270191793316151471, guid: 74ae2dccf8ec2734a82c558f71c39af9, type: 3}
   - {fileID: 8270191793316151471, guid: 1bb2db85763e4fb478df174f4a1e9339, type: 3}
+  - {fileID: 8270191793316151471, guid: 81df6d90babe95f46a157037ebb7bdb2, type: 3}
+  - {fileID: 8270191793316151471, guid: 6f591809ee0a529478a65ad55829c878, type: 3}
+  - {fileID: 8270191793316151471, guid: e9f965d81026bcd49b5e5faaae449291, type: 3}
 --- !u!4 &362822596
 Transform:
   m_ObjectHideFlags: 0
@@ -9904,6 +9907,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a5826a9b0c68d3848b6d428c2c14ed7d, type: 2}
   - {fileID: 11400000, guid: 2a8f9d664c55608428f27b7446c39f9b, type: 2}
   - {fileID: 11400000, guid: c6d92e67bc16a4849b4de2fe04434af8, type: 2}
+  - {fileID: 11400000, guid: 7646237c32f4b474997b2e39eb27d8c9, type: 2}
+  - {fileID: 11400000, guid: 632eb79e53f5287419b3d69528717940, type: 2}
+  - {fileID: 11400000, guid: 0f8382c5901396a4f9ee612b59d9124d, type: 2}
   Toy_Tile_Prefab: {fileID: 7176946206398070469, guid: 263434186e1c1fa47a69d5a4899a39dd, type: 3}
   Toy_Selection_Tiles_Parent: {fileID: 334866928}
   PopulatedTiles: []
@@ -11226,6 +11232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76134f5b8625dd740ace79578d5b42d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TestMode: 1
   Toy_Sounds_Count: 0
   LevelData: 
   Click_Count: 0
@@ -14758,7 +14765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -39.53009}
+  m_AnchoredPosition: {x: 0, y: -39.53015}
   m_SizeDelta: {x: -120.92, y: -79.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142869740
