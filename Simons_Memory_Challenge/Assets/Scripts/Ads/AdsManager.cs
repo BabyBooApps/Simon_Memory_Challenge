@@ -36,6 +36,6 @@ public class AdsManager : MonoBehaviour
 
        
 
-        banner.ShowAd();
+       // banner.ShowAd();
     }
 }

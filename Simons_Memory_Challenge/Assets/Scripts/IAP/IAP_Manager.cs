@@ -18,18 +18,23 @@ public class IAP_Manager : MonoBehaviour
         {
             case NoAds_ID:
                 Debug.Log("Bought No Ads Successfully!!!");
+                InAppRewards.Instance.On_No_Ads_Purchase_Success();
                 break;
             case Coins_1000_ID:
                 Debug.Log("Bought 1000 coins Successfully!!!");
+                InAppRewards.Instance.On_Coins_Bought((int)product.definition.payout.quantity);
                 break;
             case Coins_2500_ID:
                 Debug.Log("Bought 2500 Successfully!!!");
+                InAppRewards.Instance.On_Coins_Bought((int)product.definition.payout.quantity);
                 break;
             case Coins_5000_ID:
                 Debug.Log("Bought 5000 Successfully!!!");
+                InAppRewards.Instance.On_Coins_Bought((int)product.definition.payout.quantity);
                 break;
             case Coins_10000_ID:
                 Debug.Log("Bought 10000 Successfully!!!");
+                InAppRewards.Instance.On_Coins_Bought((int)product.definition.payout.quantity);
                 break;
 
         }

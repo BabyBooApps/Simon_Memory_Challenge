@@ -26,6 +26,8 @@ public class InterstitialAdController : MonoBehaviour
     /// </summary>
     public void LoadAd()
     {
+
+
         // Clean up the old ad before loading a new one.
         if (_interstitialAd != null)
         {
@@ -71,6 +73,11 @@ public class InterstitialAdController : MonoBehaviour
     /// </summary>
     public void ShowAd()
     {
+        if (PlayerPrefs_Manager.Instance.GetNoAdsStatus())
+        {
+            return;
+        }
+
         if (_interstitialAd != null && _interstitialAd.CanShowAd())
         {
             Debug.Log("Showing interstitial ad.");

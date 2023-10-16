@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerPrefs_Manager : MonoBehaviour
 {
     public static PlayerPrefs_Manager Instance;
-
+    public const string NoAds_String = "NoAds";
+    public bool DeleteAllPlayerPrefs;
 
     private void Awake()
     {
@@ -18,7 +19,11 @@ public class PlayerPrefs_Manager : MonoBehaviour
         {
             Instance = this;
         }
-       // PlayerPrefs.DeleteAll();
+        if(DeleteAllPlayerPrefs)
+        {
+            PlayerPrefs.DeleteAll();
+        }
+       
     }
 
     public void SetCoins(int count)
@@ -42,5 +47,17 @@ public class PlayerPrefs_Manager : MonoBehaviour
         isToyUnlocked = PlayerPrefs.GetInt(toyId) == 1 ? true : false;
 
         return isToyUnlocked;
+    }
+
+    public void Set_No_Ads_Status(bool adsStatus)
+    {
+        int adStatus = (adsStatus == true ? 1 : 0);
+        PlayerPrefs.SetInt(NoAds_String, adStatus);
+
+    }
+
+    public bool GetNoAdsStatus()
+    {
+        return PlayerPrefs.GetInt(NoAds_String) == 1 ? true : false;
     }
 }

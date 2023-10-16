@@ -36,6 +36,7 @@ public class UI_Manager : MonoBehaviour
     {
         //Set_ToyselectionScreen();
         SetGameCoins();
+        SetHomeScreen();
         CurrentScreen = ActiveScreen.HomeScreen;
     }
 
@@ -66,6 +67,7 @@ public class UI_Manager : MonoBehaviour
     public void SetHomeScreen()
     {
         Home_Screen.EnableScreen();
+        Home_Screen.Set_No_Ads_Btn();
         UI_Manager.Instance.CurrentScreen = ActiveScreen.HomeScreen;
     }
 

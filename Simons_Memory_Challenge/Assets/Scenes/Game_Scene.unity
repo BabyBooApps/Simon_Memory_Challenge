@@ -6119,7 +6119,7 @@ GameObject:
   - component: {fileID: 864439485}
   - component: {fileID: 864439484}
   - component: {fileID: 864439487}
-  - component: {fileID: 864439486}
+  - component: {fileID: 864439488}
   m_Layer: 5
   m_Name: NoAds
   m_TagString: Untagged
@@ -6186,57 +6186,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864439481}
   m_CullTransparentMesh: 1
---- !u!114 &864439486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864439481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  productId: noads
-  buttonType: 0
-  consumePurchase: 1
-  onTransactionsRestored:
-    m_PersistentCalls:
-      m_Calls: []
-  onPurchaseComplete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 807983609}
-        m_TargetAssemblyTypeName: IAP_Manager, Assembly-CSharp
-        m_MethodName: OnPurchaseComplete
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onPurchaseFailed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 807983609}
-        m_TargetAssemblyTypeName: IAP_Manager, Assembly-CSharp
-        m_MethodName: OnPurchaseFailed
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  titleText: {fileID: 0}
-  descriptionText: {fileID: 0}
-  priceText: {fileID: 0}
 --- !u!114 &864439487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6281,6 +6230,70 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &864439488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864439481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b79b5624d944058bd39aad2b90fb275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: noads
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 807983609}
+        m_TargetAssemblyTypeName: IAP_Manager, Assembly-CSharp
+        m_MethodName: OnPurchaseComplete
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 807983609}
+        m_TargetAssemblyTypeName: IAP_Manager, Assembly-CSharp
+        m_MethodName: OnPurchaseFailed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onProductFetched:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  button: {fileID: 864439487}
 --- !u!1 &891520637
 GameObject:
   m_ObjectHideFlags: 0
@@ -6436,7 +6449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.7, y: -45.700012}
+  m_AnchoredPosition: {x: -182.70001, y: -45.69995}
   m_SizeDelta: {x: 99.975, y: 40.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893894995
@@ -10541,6 +10554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI_Mgr: {fileID: 0}
   canvas_group: {fileID: 1383617852}
+  NoAdsBtn: {fileID: 864439487}
 --- !u!225 &1383617852
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14728,6 +14742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948426178}
   - component: {fileID: 1948426177}
+  - component: {fileID: 1948426179}
   m_Layer: 0
   m_Name: PlayerPerfs
   m_TagString: Untagged
@@ -14747,6 +14762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3c3494dad8ad946bd3b18951fb92cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeleteAllPlayerPrefs: 0
 --- !u!4 &1948426178
 Transform:
   m_ObjectHideFlags: 0
@@ -14762,6 +14778,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948426179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948426176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efa2cdbc9a76084386845c393d9bcd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1966280967
 GameObject:
   m_ObjectHideFlags: 0
@@ -15344,7 +15372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 24d7178ef5ed97c4db1d3eaee3cccf6a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16121,8 +16149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -39.53015}
-  m_SizeDelta: {x: -120.92, y: -79.06}
+  m_AnchoredPosition: {x: 0, y: 9.300049}
+  m_SizeDelta: {x: -120.92, y: -176.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142869740
 MonoBehaviour:

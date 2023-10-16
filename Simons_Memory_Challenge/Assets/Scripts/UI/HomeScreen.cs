@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HomeScreen : UI_Screen
 {
+    public Button NoAdsBtn;
+    
+
+    public void Set_No_Ads_Btn()
+    {
+        NoAdsBtn.enabled = !PlayerPrefs_Manager.Instance.GetNoAdsStatus();
+    }
     public void OnFreeRun_Btn_Click()
     {
         AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
