@@ -1,0 +1,6 @@
+Product ID,Published State,Purchase Type,Auto Translate,Locale; Title; Description,Auto Fill Prices,Price,Pricing Template ID
+noads,published,managed_by_android,FALSE,en_US;No Ads;Restrict showing ads,TRUE,0.99,
+coins_1000,published,managed_by_android,FALSE,en_US;1000 Coins;Get 1000 coins,TRUE,0.99,
+coins_2500,published,managed_by_android,FALSE,en_US;2500 Coins;Get 2500 Coins,TRUE,1.99,
+coins_5000,published,managed_by_android,FALSE,en_US;5000 Coins;Get 5000 Coins,TRUE,2.99,
+coins_10000,published,managed_by_android,FALSE,en_US;10000 Coins;Get 10000 Coins,TRUE,4.99,

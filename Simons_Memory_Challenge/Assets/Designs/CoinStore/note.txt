@@ -1,0 +1,15 @@
+Watch VIDEO to get 50 coins: text
+
+Font: a Akhir Tahun
+size: 12px
+Number size: 16
+
+Color codes
+
+Number(yellow):fde203
+Coins : White & stroke color(blue): 004f92
+Stroke size:4
+
+All text have dropshadow
+dropshadow size: snap given
+

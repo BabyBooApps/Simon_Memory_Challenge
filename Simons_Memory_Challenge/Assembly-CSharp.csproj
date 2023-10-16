@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\States.cs" />
     <Compile Include="Assets\Scripts\Ads\InterstitialAdController.cs" />
+    <Compile Include="Assets\Scripts\IAP\IAP_Manager.cs" />
     <Compile Include="Assets\Scripts\Ads\BannerViewController.cs" />
     <Compile Include="Assets\Scripts\Coin_Manager.cs" />
     <Compile Include="Assets\Scripts\UI\HomeScreen.cs" />
@@ -98,6 +99,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.dll" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds_version-8.5.2_manifest.txt" />
+    <None Include="Assets\Designs\CoinStore\note.txt" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.iOS.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -850,6 +852,9 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Services.Analytics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
@@ -861,6 +866,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>

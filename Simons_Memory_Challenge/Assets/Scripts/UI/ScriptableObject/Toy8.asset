@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toy8
   m_EditorClassIdentifier: 
   Tile_Bg: {fileID: 0}
-  Toy_Img: {fileID: 21300000, guid: 15fb4eafba9b82c41ace9867b7128f3c, type: 3}
+  Toy_Img: {fileID: 21300000, guid: 52ca0ab59bcf7cf4eaa7e1ab76303315, type: 3}
   ToyName: Toy8
   Toy_Id: 8
   CoinsToBuy: 3000
