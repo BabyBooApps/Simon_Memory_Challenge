@@ -47,7 +47,7 @@ public class GameData : MonoBehaviour
     public void SetDemoData()
     {
         
-        Level_No = 1;
+        Level_No = 54;
         gameType = GameType.FreeTrial;
     }
 

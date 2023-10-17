@@ -259,6 +259,11 @@ public class GamePlay : MonoBehaviour
 
             AddCoins(Coin_Bonus.CoinBonus[GameData.Instance.Level_No - 1]);
             GameData.Instance.Level_No++;
+           if (GameData.Instance.Level_No >= LevelManager.instance.levels.Count)
+            {
+                Debug.Log("All Levels Completed : ");
+                return;
+            }
             GameData.Instance.Score = 0;
             GameData.Instance.Click_Count = 0;
             GameData.Instance.GameTurn = Turn.Computer;

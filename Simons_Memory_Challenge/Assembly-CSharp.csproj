@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Ads\AdsManager.cs" />
     <Compile Include="Assets\Scripts\UI\QuitScreen.cs" />
     <Compile Include="Assets\Scripts\UI\GameScreen_UI.cs" />
+    <Compile Include="Assets\Scripts\IAP\InAppRewards.cs" />
     <Compile Include="Assets\Scripts\UI\ToySelection.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\States.cs" />
@@ -90,7 +91,6 @@
     <Compile Include="Assets\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\Scripts\Glow.cs" />
     <Compile Include="Assets\Scripts\BackButton_Handler.cs" />
-    <Compile Include="Assets\Scripts\IAP\InAppRewards.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
