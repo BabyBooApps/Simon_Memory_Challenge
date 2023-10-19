@@ -36,6 +36,7 @@ public class Buy_Toy_Screen : UI_Screen
 
     public void OnBackButton_Click()
     {
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         Toy = null;
         UI_Manager.Instance.CurrentScreen = ActiveScreen.ToySelectionScreen;
         UI_Manager.Instance.PreviousScreen = ActiveScreen.HomeScreen;
@@ -49,6 +50,7 @@ public class Buy_Toy_Screen : UI_Screen
         {
             if(Toy.coinsToBuy <= Coin_Manager.Instance.getCoinCount())
             {
+                AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
                 PlayerPrefs_Manager.Instance.SetToy_LockStatsu(Toy.Toy_Name, 1);
                 Toy.isUnlocked = true;
                 UI_Manager.Instance.Animate_Toast("You Owned " + Toy.Toy_Name.ToUpper() + " !!!");
@@ -65,11 +67,13 @@ public class Buy_Toy_Screen : UI_Screen
 
     public void OnWatchAd_Button_Click()
     {
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         AdsManager.Instance.RewardAd.ShowAd();
     }
 
     public void OnCoinStoreButtonClick()
     {
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         UI_Manager.Instance.Activate_CoinStore_Screen();
     }
 

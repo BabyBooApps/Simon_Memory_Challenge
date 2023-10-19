@@ -14,6 +14,7 @@ public class UI_Manager : MonoBehaviour
     public Toast toast;
     public Coin_StoreScreen CoinStore_Screen;
     public Buy_Toy_Screen BuyToyScreen;
+    public MaxLevelReached Max_Levels_Reached_Screen;
     public ActiveScreen CurrentScreen;
     public ActiveScreen PreviousScreen;
 
@@ -139,6 +140,13 @@ public class UI_Manager : MonoBehaviour
 
         PreviousScreen = CurrentScreen;
         CurrentScreen = ActiveScreen.BuyToyScreen;
+    }
+
+    public void Activate_All_Levels_Complete_Screen()
+    {
+        PreviousScreen = CurrentScreen;
+        Max_Levels_Reached_Screen.EnableScreen();
+        CurrentScreen = ActiveScreen.AllLevelCompletedScreen;
     }
 
 

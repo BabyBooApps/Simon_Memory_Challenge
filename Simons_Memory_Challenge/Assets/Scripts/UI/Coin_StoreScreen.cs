@@ -15,6 +15,7 @@ public class Coin_StoreScreen : UI_Screen
 
     public void OnWatch_Ad_Button_Click()
     {
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         AdsManager.Instance.RewardAd.ShowAd();
     }
 }

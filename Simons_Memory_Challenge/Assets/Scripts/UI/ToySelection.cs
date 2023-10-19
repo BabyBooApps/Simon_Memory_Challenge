@@ -55,6 +55,7 @@ public class ToySelection : UI_Screen
 
     public void On_CoinStoreButtonClick()
     {
+        AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
         UI_Manager.Instance.Activate_CoinStore_Screen();
     }
    

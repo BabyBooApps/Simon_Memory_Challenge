@@ -61,5 +61,6 @@ public enum ActiveScreen
     GameOverScreen,
     QuitScreen,
     CoinStoreScreen,
-    BuyToyScreen
+    BuyToyScreen,
+    AllLevelCompletedScreen
 }

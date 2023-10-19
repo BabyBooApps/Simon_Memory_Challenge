@@ -140,7 +140,8 @@ public class GamePlay : MonoBehaviour
                         UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
                         if (IsLevelCompleted(GameData.Instance.Score))
                         {
-                            OnLevelCompleted();
+                            Invoke("OnLevelCompleted", 0.5f);
+                           // OnLevelCompleted();
                         }
 
                     }
@@ -262,14 +263,23 @@ public class GamePlay : MonoBehaviour
            if (GameData.Instance.Level_No >= LevelManager.instance.levels.Count)
             {
                 Debug.Log("All Levels Completed : ");
-                return;
+                UI_Manager.Instance.Game_Screen.DisableScreen();
+                GamePlay.Instance.DestroyToy();
+                UI_Manager.Instance.Activate_All_Levels_Complete_Screen();
+                GameData.Instance.Score = 0;
+                GameData.Instance.Click_Count = 0;
+                GameData.Instance.Level_No = 1;
+               
+            }else
+            {
+                GameData.Instance.Score = 0;
+                GameData.Instance.Click_Count = 0;
+                GameData.Instance.GameTurn = Turn.Computer;
+                UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
+                UI_Manager.Instance.Game_Screen.set_LevelNo(GameData.Instance.Level_No);
+                StartCoroutine(Start_GamePlay());
             }
-            GameData.Instance.Score = 0;
-            GameData.Instance.Click_Count = 0;
-            GameData.Instance.GameTurn = Turn.Computer;
-            UI_Manager.Instance.Game_Screen.set_Score(GameData.Instance.Score);
-            UI_Manager.Instance.Game_Screen.set_LevelNo(GameData.Instance.Level_No);
-            StartCoroutine(Start_GamePlay());
+            
         }catch(Exception ex)
         {
             Debug.Log("Setting Next Level Exception :" + ex.Message);
