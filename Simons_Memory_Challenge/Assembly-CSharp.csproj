@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\States.cs" />
     <Compile Include="Assets\Scripts\Ads\InterstitialAdController.cs" />
+    <Compile Include="Assets\Scripts\UI\MaxLevelReached.cs" />
     <Compile Include="Assets\Scripts\IAP\IAP_Manager.cs" />
     <Compile Include="Assets\Scripts\Ads\BannerViewController.cs" />
     <Compile Include="Assets\Scripts\Coin_Manager.cs" />
@@ -91,7 +92,6 @@
     <Compile Include="Assets\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\Scripts\Glow.cs" />
     <Compile Include="Assets\Scripts\BackButton_Handler.cs" />
-    <Compile Include="Assets\Scripts\UI\MaxLevelReached.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
