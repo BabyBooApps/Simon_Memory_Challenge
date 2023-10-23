@@ -2695,9 +2695,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326546391}
-  - component: {fileID: 326546390}
-  - component: {fileID: 326546389}
-  - component: {fileID: 326546388}
+  - component: {fileID: 326546395}
+  - component: {fileID: 326546394}
+  - component: {fileID: 326546393}
   - component: {fileID: 326546392}
   m_Layer: 0
   m_Name: AdsManager
@@ -2706,47 +2706,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &326546388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326546387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5283a62a89f2fcd4284e0ef25b85fa67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AdLoadedStatus: {fileID: 0}
---- !u!114 &326546389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326546387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df71726ce21c7746adb8be2d01243c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AdLoadedStatus: {fileID: 0}
---- !u!114 &326546390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326546387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcec079d878b1f440a8abd3e26bb66eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  banner: {fileID: 326546389}
-  interstitial: {fileID: 326546388}
-  RewardAd: {fileID: 326546392}
 --- !u!4 &326546391
 Transform:
   m_ObjectHideFlags: 0
@@ -2776,6 +2735,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AdLoadedStatus: {fileID: 0}
+--- !u!114 &326546393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326546387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5283a62a89f2fcd4284e0ef25b85fa67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AdLoadedStatus: {fileID: 0}
+--- !u!114 &326546394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326546387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df71726ce21c7746adb8be2d01243c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AdLoadedStatus: {fileID: 0}
+--- !u!114 &326546395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326546387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcec079d878b1f440a8abd3e26bb66eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  banner: {fileID: 326546394}
+  interstitial: {fileID: 326546393}
+  RewardAd: {fileID: 326546392}
 --- !u!1 &334866928
 GameObject:
   m_ObjectHideFlags: 0

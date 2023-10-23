@@ -28,6 +28,7 @@ public class InterstitialAdController : MonoBehaviour
     {
 
 
+
         // Clean up the old ad before loading a new one.
         if (_interstitialAd != null)
         {

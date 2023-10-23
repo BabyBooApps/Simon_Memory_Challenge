@@ -25,17 +25,32 @@ public class AdsManager : MonoBehaviour
             Instance = this;
         }
 
-        MobileAds.Initialize((InitializationStatus initStatus) =>
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize(initStatus => { });
+
+        interstitial.LoadAd();
+        banner.LoadAd();
+        RewardAd.LoadAd();
+
+       /* MobileAds.Initialize((InitializationStatus initStatus) =>
         {
-            //LoadInterstitialAd(); 
-            interstitial.LoadAd();
-            banner.LoadAd();
-            RewardAd.LoadAd();
+            if (initStatus.ToString() == "Initialized")
+            {
+                Debug.Log("Ads Initialized Successfully!!!");
+                // Initialization was successful, you can proceed with loading ads.
+                interstitial.LoadAd();
+                banner.LoadAd();
+                RewardAd.LoadAd();
+            }
+            else
+            {
+                // Initialization failed, handle the error or inform the user.
+                Debug.LogError("Initialization failed: " + initStatus.ToString());
+            }
+        });*/
 
-        });
 
-       
 
-       // banner.ShowAd();
+        // banner.ShowAd();
     }
 }
