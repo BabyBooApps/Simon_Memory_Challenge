@@ -56,7 +56,7 @@ public class Buy_Toy_Screen : UI_Screen
                 UI_Manager.Instance.Animate_Toast("You Owned " + Toy.Toy_Name.ToUpper() + " !!!");
                 Coin_Manager.Instance.RemoveCoins(Toy.coinsToBuy);
                 PlayerPrefs_Manager.Instance.SetCoins(Coin_Manager.Instance.getCoinCount());
-                UI_Manager.Instance.ToySelection_Screen.RefreshTiles();
+                UI_Manager.Instance.ToySelection_Screen.SetTiles_Lock_Status();
                 OnBackButton_Click();
             }else
             {

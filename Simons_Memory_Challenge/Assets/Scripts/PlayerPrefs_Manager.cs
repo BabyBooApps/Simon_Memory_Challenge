@@ -55,7 +55,7 @@ public class PlayerPrefs_Manager : MonoBehaviour
         PlayerPrefs.SetInt(toyId, Lockstatus);
     }
 
-    public bool GetLockStatus(string toyId)
+    public bool GetUnLockStatus(string toyId)
     {
         bool isToyUnlocked = false;
         isToyUnlocked = PlayerPrefs.GetInt(toyId) == 1 ? true : false;

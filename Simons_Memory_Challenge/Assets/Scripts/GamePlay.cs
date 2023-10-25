@@ -77,7 +77,7 @@ public class GamePlay : MonoBehaviour
             GameData.Instance.GameTurn = Turn.Computer;
             yield return Automate(GameData.Instance.LevelData);
             GameData.Instance.Game_State = GameState.Hold;
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(1.0f);
             GameData.Instance.GameTurn = Turn.Player;
             UI_Manager.Instance.Game_Screen.Turn_Text.text = "Player Turn";
             UI_Manager.Instance.Game_Screen.Turn_Info.SetActive(true);

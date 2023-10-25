@@ -26,7 +26,7 @@ public class ToySelection : UI_Screen
             SetToyTile(Current_Tile, Toy_Tiles_Scriptables[i]);
         }
 
-        RefreshTiles();
+        SetTiles_Lock_Status();
     }
 
     public void SetToyTile(ToyTile_UI toy , ToyTile Target_toy_Tile)
@@ -38,11 +38,11 @@ public class ToySelection : UI_Screen
         toy.coinsToBuy = Target_toy_Tile.CoinsToBuy;
     }
 
-    public void RefreshTiles()
+    public void SetTiles_Lock_Status()
     {
         for(int i = 0; i < PopulatedTiles.Count; i++)
         {
-            PopulatedTiles[i].Lock_Img.gameObject.SetActive(!PlayerPrefs_Manager.Instance.GetLockStatus(PopulatedTiles[i].Toy_Name));
+            PopulatedTiles[i].Lock_Img.gameObject.SetActive(!GameData.Instance.TestMode && !PlayerPrefs_Manager.Instance.GetUnLockStatus(PopulatedTiles[i].Toy_Name));
         }
     }
 

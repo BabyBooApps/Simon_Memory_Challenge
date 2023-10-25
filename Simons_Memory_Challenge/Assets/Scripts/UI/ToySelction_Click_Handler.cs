@@ -31,7 +31,7 @@ public class ToySelction_Click_Handler : MonoBehaviour
         {
             Toy_Tile = GetComponentInParent<ToyTile_UI>();
         }
-        if(PlayerPrefs_Manager.Instance.GetLockStatus(Toy_Tile.Toy_Name.ToString()) || GameData.Instance.TestMode)
+        if(PlayerPrefs_Manager.Instance.GetUnLockStatus(Toy_Tile.Toy_Name.ToString()) || GameData.Instance.TestMode)
         {
             AudioManager.Instance.PlayShortSound(AudioManager.Instance.Button_Click);
             ToySelection.ToyTile_Clicked(Toy_Tile.Toy_id);
