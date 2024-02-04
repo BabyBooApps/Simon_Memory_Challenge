@@ -3213,7 +3213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   productId: coins_1000
   buttonType: 0
-  consumePurchase: 0
+  consumePurchase: 1
   onTransactionsRestored:
     m_PersistentCalls:
       m_Calls: []
@@ -6636,7 +6636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   productId: noads
   buttonType: 0
-  consumePurchase: 1
+  consumePurchase: 0
   onTransactionsRestored:
     m_PersistentCalls:
       m_Calls: []
@@ -10599,7 +10599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   productId: coins_10000
   buttonType: 0
-  consumePurchase: 0
+  consumePurchase: 1
   onTransactionsRestored:
     m_PersistentCalls:
       m_Calls: []
@@ -15274,7 +15274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   productId: coins_2500
   buttonType: 0
-  consumePurchase: 0
+  consumePurchase: 1
   onTransactionsRestored:
     m_PersistentCalls:
       m_Calls: []
@@ -15653,7 +15653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   productId: coins_5000
   buttonType: 0
-  consumePurchase: 0
+  consumePurchase: 1
   onTransactionsRestored:
     m_PersistentCalls:
       m_Calls: []

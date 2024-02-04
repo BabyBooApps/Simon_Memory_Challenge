@@ -13,14 +13,15 @@ using GoogleMobileAds.Api;
 
         // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
-        private const string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
+        //private const string _adUnitId = "ca-app-pub-3940256099942544/5224354917"; // Test Ads
+        private const string _adUnitId = "ca-app-pub-6727597482466175/7828149478";
 #elif UNITY_IPHONE
         private const string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
 #else
         private const string _adUnitId = "unused";
 #endif
 
-        private RewardedAd _rewardedAd;
+    private RewardedAd _rewardedAd;
 
         /// <summary>
         /// Loads the ad.

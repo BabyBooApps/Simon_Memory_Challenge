@@ -10,7 +10,8 @@ public class BannerViewController : MonoBehaviour
 
     // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
-    private const string _adUnitId = "ca-app-pub-3940256099942544/6300978111";
+    //private const string _adUnitId = "ca-app-pub-3940256099942544/6300978111"; //Test Ads
+    private const string _adUnitId = "ca-app-pub-6727597482466175/4594647327";
 #elif UNITY_IPHONE
         private const string _adUnitId = "ca-app-pub-3940256099942544/2934735716";
 #else
